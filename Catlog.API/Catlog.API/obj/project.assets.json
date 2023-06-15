@@ -1073,19 +1073,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a.mall\\.nuget\\packages\\": {}
+    "C:\\Users\\ankur\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\Docker\\Catlog.API\\Catlog.API\\Catlog.API.csproj",
+      "projectUniqueName": "C:\\Users\\ankur\\source\\catlog\\doccker-with-web-api\\Catlog.API\\Catlog.API\\Catlog.API.csproj",
       "projectName": "Catlog.API",
-      "projectPath": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\Docker\\Catlog.API\\Catlog.API\\Catlog.API.csproj",
-      "packagesPath": "C:\\Users\\a.mall\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a.mall\\OneDrive - Adform\\Desktop\\Docker\\Catlog.API\\Catlog.API\\obj\\",
+      "projectPath": "C:\\Users\\ankur\\source\\catlog\\doccker-with-web-api\\Catlog.API\\Catlog.API\\Catlog.API.csproj",
+      "packagesPath": "C:\\Users\\ankur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ankur\\source\\catlog\\doccker-with-web-api\\Catlog.API\\Catlog.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\a.mall\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ankur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1139,7 +1139,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
