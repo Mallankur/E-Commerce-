@@ -50,11 +50,11 @@ namespace Catlog.API.Controllers
             return Ok(newid);
         }
         [HttpPut]
-        public async Task<ActionResult>Update(string id , Product udatepdt)
+        public async Task<ActionResult>Update( Product udatepdt)
         {
-           var idexit= await _mongoServisescs.GetById(id);
-            if (idexit is null ) return NotFound();
-            await _mongoServisescs.UpdateProduct(id, udatepdt);
+            var idexit = await _mongoServisescs.UpdateProduct(udatepdt);
+            if (udatepdt.Id is null ) return NotFound();
+            await _mongoServisescs.UpdateProduct( udatepdt);
             return Ok(idexit);
 
         }

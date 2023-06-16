@@ -14,5 +14,6 @@ namespace Catlog.API.Repositories
 
         Task UpdateProduct(string id ,Product product);
         Task<bool> DeleteProduct(string id);
+        Task<bool> UpdateProduct(Product product);
     }
 }

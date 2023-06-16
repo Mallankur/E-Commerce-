@@ -81,7 +81,21 @@ namespace Catlog.API.Servises
             public async Task UpdateProduct(string id, Product newproduct) =>
                 await Pdt.ReplaceOneAsync(x => x.Id == id, newproduct);
 
+       
+
+       public  async Task<bool> UpdateProduct(Product product)
+        {
+            var filter = Builders<Product>.Filter.Eq(X => X.Id, product.Id);
+            if (filter == null)
+            {
+                 return false ;
+
+            }
+
+           var res= await Pdt.ReplaceOneAsync(filter, product);
+            return res.IsAcknowledged && res.ModifiedCount>  0;
         }
+    }
 
 
 
