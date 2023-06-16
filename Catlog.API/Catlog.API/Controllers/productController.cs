@@ -8,15 +8,17 @@ using System.Threading.Channels;
 
 namespace Catlog.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class productController : ControllerBase
     {
         private readonly MongoServisescs _mongoServisescs;
+        private readonly ILogger<productController> _logger;
       
-        public productController(MongoServisescs mongoServisescs)
+        public productController(MongoServisescs mongoServisescs,ILogger<productController> logger)
         {
             _mongoServisescs = mongoServisescs;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
 
 
@@ -50,11 +52,11 @@ namespace Catlog.API.Controllers
             return Ok(newid);
         }
         [HttpPut]
-        public async Task<ActionResult>Update(string id , Product udatepdt)
+        public async Task<ActionResult>Update( Product udatepdt)
         {
-           var idexit= await _mongoServisescs.GetById(id);
-            if (idexit is null ) return NotFound();
-            await _mongoServisescs.UpdateProduct(id, udatepdt);
+            if (udatepdt.Id is null ) return NotFound();
+            var idexit = await _mongoServisescs.UpdateProduct(udatepdt);
+           // await _mongoServisescs.UpdateProduct( udatepdt);
             return Ok(idexit);
 
         }
