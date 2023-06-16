@@ -8,7 +8,7 @@ using System;
 namespace Catlog.API.Servises
 {
     // Depndency Injection 
-    public class MongoServisescs : ICatalogContext, IRepo
+    public class MongoServisescs : CotaLogContextSeed, ICatalogContext, IRepo
     {
 
         public IMongoCollection<Product> Pdt { get; }
@@ -44,7 +44,17 @@ namespace Catlog.API.Servises
         // Get All Data 
             public async Task<IEnumerable<Product>> GetAll()
             {
-                return await Pdt.Find(_ => true).ToListAsync();
+                var res =  await Pdt.Find(_ => true).ToListAsync();
+              if (res.Count==0)
+              {
+                
+                 var res2= await GetData(Pdt);
+                  return res2;
+
+
+
+              }
+                  return res;
                 
             }
 
