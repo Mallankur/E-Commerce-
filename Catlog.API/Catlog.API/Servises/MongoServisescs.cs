@@ -86,7 +86,7 @@ namespace Catlog.API.Servises
        public  async Task<bool> UpdateProduct(Product product)
         {
             var filter = Builders<Product>.Filter.Eq(X => X.Id, product.Id);
-            if (filter == null)
+            if (product.Id == null )
             {
                  return false ;
 

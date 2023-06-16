@@ -52,9 +52,9 @@ namespace Catlog.API.Controllers
         [HttpPut]
         public async Task<ActionResult>Update( Product udatepdt)
         {
-            var idexit = await _mongoServisescs.UpdateProduct(udatepdt);
             if (udatepdt.Id is null ) return NotFound();
-            await _mongoServisescs.UpdateProduct( udatepdt);
+            var idexit = await _mongoServisescs.UpdateProduct(udatepdt);
+           // await _mongoServisescs.UpdateProduct( udatepdt);
             return Ok(idexit);
 
         }
