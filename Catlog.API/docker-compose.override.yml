@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  catlogdb:
+    container_name: mongo-container
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    
+  catlog.api:
+    container_name: catlog.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MongoObject=mongodb://mongo-container:27017
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    depends_on:
+      - catlogdb
+    ports:
+      - "9000:80"
+      - "443:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+volumes:
+  mongo_data:

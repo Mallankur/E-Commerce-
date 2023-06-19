@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catlog.API", "Catlog.API\Catlog.API.csproj", "{78CD2750-B5C0-4A19-9FB6-D824E3013674}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catlog.API", "Catlog.API\Catlog.API.csproj", "{78CD2750-B5C0-4A19-9FB6-D824E3013674}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1CF499B2-61C2-4C60-BF8D-31BBC7ADDC0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +15,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{78CD2750-B5C0-4A19-9FB6-D824E3013674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78CD2750-B5C0-4A19-9FB6-D824E3013674}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78CD2750-B5C0-4A19-9FB6-D824E3013674}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78CD2750-B5C0-4A19-9FB6-D824E3013674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CD2750-B5C0-4A19-9FB6-D824E3013674}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CD2750-B5C0-4A19-9FB6-D824E3013674}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1CF499B2-61C2-4C60-BF8D-31BBC7ADDC0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF499B2-61C2-4C60-BF8D-31BBC7ADDC0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF499B2-61C2-4C60-BF8D-31BBC7ADDC0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF499B2-61C2-4C60-BF8D-31BBC7ADDC0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

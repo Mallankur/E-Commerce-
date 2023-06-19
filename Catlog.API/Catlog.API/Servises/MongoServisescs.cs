@@ -58,7 +58,7 @@ namespace Catlog.API.Servises
                 
             }
 
-        // 
+       
         // Fetch Data from database  using CategoryName 
             public async Task<List<Product>> GetByCategory(string CategoryName)
             {

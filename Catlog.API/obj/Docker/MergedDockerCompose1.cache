@@ -1,0 +1,55 @@
+name: dockercompose9340450937930486482
+services:
+  catlog.api:
+    build:
+      context: C:\Users\ankur\source\catlog\doccker-with-web-api\Catlog.API
+      dockerfile: Catlog.API/Dockerfile
+    container_name: catlog.api
+    depends_on:
+      catlogdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      MongoObject: mongodb://mongo-container:27017
+    image: catlogapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "9000"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "443"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\ankur\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  catlogdb:
+    container_name: mongo-container
+    image: mongo
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 27017
+      published: "27017"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: mongo_data
+      target: /data/db
+      volume: {}
+networks:
+  default:
+    name: dockercompose9340450937930486482_default
+volumes:
+  mongo_data:
+    name: dockercompose9340450937930486482_mongo_data

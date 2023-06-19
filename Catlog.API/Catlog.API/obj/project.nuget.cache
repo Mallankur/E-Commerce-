@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hI84Deszw6fBVADl+w/Q2m+94zXkudw4IZ6EnOMLuNqV8Mgfvv684u910svbcY+tekvfa/N4KBOiRXtcB0qjVw==",
+  "dgSpecHash": "o5F7cHwnGvMgxTOzi1I3KkaTwvQcMGBgblDTu4jGT3eJghFPi7ppy1VrWDUmYZF4X9AjJ8sAwFBNvKN6iFg/2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\ankur\\source\\catlog\\doccker-with-web-api\\Catlog.API\\Catlog.API\\Catlog.API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\ankur\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\ankur\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\ankur\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ankur\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512",
     "C:\\Users\\ankur\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\ankur\\.nuget\\packages\\mongodb.bson\\2.17.1\\mongodb.bson.2.17.1.nupkg.sha512",
     "C:\\Users\\ankur\\.nuget\\packages\\mongodb.driver\\2.17.1\\mongodb.driver.2.17.1.nupkg.sha512",

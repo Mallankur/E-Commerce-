@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  catlogdb:
+    image:  mongo
+  catlog.api:
+    image: ${DOCKER_REGISTRY-}catlogapi
+    build:
+      context: .
+      dockerfile: Catlog.API/Dockerfile
+volumes:
+  mongo_data:
+      
